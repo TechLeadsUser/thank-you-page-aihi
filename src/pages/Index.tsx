@@ -44,11 +44,9 @@ const Index = () => {
           <div className="absolute bottom-20 right-1/3 w-1 h-1 bg-secondary rounded-full animate-pulse delay-1000"></div>
         </div>
         
-        <div className="container relative z-10 mx-auto px-4 max-w-4xl text-center">
+        <div className="container relative z-10 mx-auto max-w-4xl text-center px-[16px]">
           {/* Back Button - Desktop */}
-          {!isMobile && <div className="absolute top-0 left-0">
-              <BackButton />
-            </div>}
+          {!isMobile}
           
           {/* Success Icon */}
           <div className="mb-8 flex justify-center">
