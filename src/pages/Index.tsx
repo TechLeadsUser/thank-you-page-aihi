@@ -56,19 +56,19 @@ const Index = () => {
           </div>
           
           {/* Main Heading */}
-          <h1 className="text-4xl xl:text-6xl font-bold text-text-primary mb-6 tracking-tight leading-tight md:text-4xl">
+          <h1 className="text-4xl text-text-primary mb-6 tracking-tight leading-tight md:text-4xl xl:text-5xl font-semibold">
             Thank you! We've received your details.
           </h1>
           
           {/* Subtext */}
-          <p className="text-lg md:text-xl text-text-secondary mb-2 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-text-secondary mb-2 max-w-2xl mx-auto leading-relaxed md:text-lg">
             Our team will contact you within 24 hours. A confirmation has been sent to{" "}
             <span className="text-secondary font-medium">{mockData.email}</span>.
           </p>
           
           {/* Reference ID */}
           <div className="mb-8">
-            <span className="inline-block bg-muted/50 border border-border-subtle px-3 py-1 rounded-lg text-sm font-mono text-text-muted">
+            <span className="inline-block bg-muted/50 border border-border-subtle px-3 py-1 rounded-lg font-mono text-text-muted text-sm text-slate-300">
               Reference ID: {mockData.referenceId}
             </span>
           </div>
