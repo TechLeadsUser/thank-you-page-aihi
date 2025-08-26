@@ -63,7 +63,7 @@ const Index = () => {
           {/* Subtext */}
           <p className="text-lg md:text-xl text-text-secondary mb-2 max-w-2xl mx-auto leading-relaxed">
             Our team will contact you within 24 hours. A confirmation has been sent to{" "}
-            <span className="text-primary font-medium">{mockData.email}</span>.
+            <span className="text-secondary font-medium">{mockData.email}</span>.
           </p>
           
           {/* Reference ID */}
