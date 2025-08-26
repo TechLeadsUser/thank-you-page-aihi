@@ -56,7 +56,7 @@ const Index = () => {
           </div>
           
           {/* Main Heading */}
-          <h1 className="text-4xl text-text-primary mb-6 tracking-tight leading-tight md:text-4xl xl:text-5xl font-semibold">
+          <h1 className="text-4xl text-text-primary mb-6 tracking-tight leading-tight md:text-4xl font-semibold xl:text-4xl">
             Thank you! We've received your details.
           </h1>
           
