@@ -1,31 +1,23 @@
 import { Phone, FileText, Presentation, Rocket } from "lucide-react";
-
-const steps = [
-  {
-    icon: Phone,
-    title: "Discovery call",
-    description: "We'll confirm your requirements.",
-  },
-  {
-    icon: FileText,
-    title: "Solution outline", 
-    description: "Architecture & approach draft.",
-  },
-  {
-    icon: Presentation,
-    title: "Proposal",
-    description: "Scope, timeline & commercials.",
-  },
-  {
-    icon: Rocket,
-    title: "Kick-off",
-    description: "Project plan & milestones.",
-  },
-];
-
+const steps = [{
+  icon: Phone,
+  title: "Discovery call",
+  description: "We'll confirm your requirements."
+}, {
+  icon: FileText,
+  title: "Solution outline",
+  description: "Architecture & approach draft."
+}, {
+  icon: Presentation,
+  title: "Proposal",
+  description: "Scope, timeline & commercials."
+}, {
+  icon: Rocket,
+  title: "Kick-off",
+  description: "Project plan & milestones."
+}];
 export function WhatHappensNext() {
-  return (
-    <section className="py-16 lg:py-20">
+  return <section className="py-16 lg:py-[40px]">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-semibold text-text-primary mb-4 tracking-tight">
@@ -37,15 +29,9 @@ export function WhatHappensNext() {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <div 
-              key={index}
-              className="group relative"
-            >
+          {steps.map((step, index) => <div key={index} className="group relative">
               {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-border-subtle to-transparent -translate-x-4"></div>
-              )}
+              {index < steps.length - 1}
               
               <div className="bg-card border border-border-subtle rounded-lg p-6 hover:border-primary/20 transition-all duration-200 hover:-translate-y-1 hover:shadow-card">
                 <div className="flex items-center mb-4">
@@ -60,14 +46,12 @@ export function WhatHappensNext() {
                 <h3 className="text-lg font-semibold text-text-primary mb-2 tracking-tight">
                   {step.title}
                 </h3>
-                <p className="text-sm text-text-secondary leading-relaxed">
+                <p className="text-text-secondary leading-relaxed text-sm">
                   {step.description}
                 </p>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }

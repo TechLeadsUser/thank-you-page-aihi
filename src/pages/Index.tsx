@@ -15,32 +15,24 @@ const mockData = {
   referenceId: "AIHI-2024-001",
   contactMethod: "Email"
 };
-
 const Index = () => {
   const isMobile = useIsMobile();
   const [showConfetti, setShowConfetti] = useState(false);
-
   useEffect(() => {
     // Trigger success animation
     const timer = setTimeout(() => {
       setShowConfetti(true);
     }, 300);
-    
     return () => clearTimeout(timer);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       {/* Success Hero Section */}
-      <section 
-        className="relative min-h-[64vh] lg:min-h-[72vh] flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
+      <section className="relative min-h-[64vh] lg:min-h-[72vh] flex items-center justify-center overflow-hidden" style={{
+      backgroundImage: `url(${heroBackground})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
         {/* Background overlay */}
         <div className="absolute inset-0 bg-background/60"></div>
         
@@ -54,11 +46,9 @@ const Index = () => {
         
         <div className="container relative z-10 mx-auto px-4 max-w-4xl text-center">
           {/* Back Button - Desktop */}
-          {!isMobile && (
-            <div className="absolute top-0 left-0">
+          {!isMobile && <div className="absolute top-0 left-0">
               <BackButton />
-            </div>
-          )}
+            </div>}
           
           {/* Success Icon */}
           <div className="mb-8 flex justify-center">
@@ -66,7 +56,7 @@ const Index = () => {
           </div>
           
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-text-primary mb-6 tracking-tight leading-tight">
+          <h1 className="text-4xl xl:text-6xl font-bold text-text-primary mb-6 tracking-tight leading-tight md:text-4xl">
             Thank you! We've received your details.
           </h1>
           
@@ -85,43 +75,15 @@ const Index = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Button 
-              variant="hero" 
-              size={isMobile ? "xl" : "xxl"}
-              className="w-full sm:w-auto"
-              data-track="cta_book"
-            >
+            <Button variant="hero" size={isMobile ? "xl" : "xxl"} className="w-full sm:w-auto" data-track="cta_book">
               Book a Free Consultation
             </Button>
             
-            <Button 
-              variant="outline_accent" 
-              size={isMobile ? "xl" : "xxl"}
-              className="w-full sm:w-auto"
-              data-track="cta_download_deck"
-            >
-              Download Company Deck
-            </Button>
+            
           </div>
           
           {/* Tertiary Links */}
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <a 
-              href="#" 
-              className="text-text-secondary hover:text-primary transition-colors duration-200 underline underline-offset-4"
-              data-track="link_services"
-            >
-              Explore Services
-            </a>
-            <span className="text-text-muted">•</span>
-            <a 
-              href="#" 
-              className="text-text-secondary hover:text-primary transition-colors duration-200 underline underline-offset-4"
-              data-track="link_homepage"
-            >
-              Visit Homepage
-            </a>
-          </div>
+          
         </div>
       </section>
       
@@ -139,8 +101,6 @@ const Index = () => {
       
       {/* Mobile Back Button */}
       {isMobile && <BackButton isMobile />}
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
