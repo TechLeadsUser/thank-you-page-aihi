@@ -18,20 +18,39 @@ export default {
 			}
 		},
 		extend: {
+			screens: {
+				'xxs': '370px',
+				'xs': '480px',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
+				surface: 'hsl(var(--surface))',
 				foreground: 'hsl(var(--foreground))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
+					dark: 'hsl(var(--primary-dark))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
+					dark: 'hsl(var(--secondary-dark))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				
+				'blue-support': 'hsl(var(--blue-support))',
+				highlight: 'hsl(var(--highlight))',
+				alert: 'hsl(var(--alert))',
+				
+				'text-primary': 'hsl(var(--text-primary))',
+				'text-secondary': 'hsl(var(--text-secondary))',
+				'text-muted': 'hsl(var(--text-muted))',
+				
+				'border-subtle': 'hsl(var(--border-subtle))',
+				
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -51,17 +70,24 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				sans: ['Poppins', 'sans-serif'],
+				mono: ['JetBrains Mono', 'monospace'],
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-cosmic': 'var(--gradient-cosmic)',
+			},
+			boxShadow: {
+				'card': 'var(--shadow-card)',
+				'glow-primary': 'var(--glow-primary)',
+				'glow-secondary': 'var(--glow-secondary)',
+			},
+			spacing: {
+				'18': '4.5rem',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
