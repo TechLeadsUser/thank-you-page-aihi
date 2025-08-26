@@ -75,9 +75,7 @@ const Index = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Button variant="hero" size={isMobile ? "xl" : "xxl"} className="w-full sm:w-auto" data-track="cta_book">
-              Book a Free Consultation
-            </Button>
+            <Button variant="hero" size={isMobile ? "xl" : "xxl"} className="w-full sm:w-auto" data-track="cta_book">Go Back</Button>
             
             
           </div>
